@@ -1,0 +1,46 @@
+<div class="h-full w-full flex justify-center items-center">
+	<div class="grid grid-cols-1">
+		<h1 class="font-serif text-6xl float-animation">James Palmer</h1>
+		<div class="grid grid-cols-2">
+			<p class="float-animation-delay-1 text-right">
+				&ldquo;Software Engineer&rdquo;
+			</p>
+		</div>
+	</div>
+</div>
+
+<style>
+	@keyframes float {
+		0%,
+		100% {
+			transform: translate(0, 0) rotate(0deg);
+		}
+		25% {
+			transform: translate(5px, -5px) rotate(1deg);
+		}
+		50% {
+			transform: translate(-5px, -10px) rotate(-0.5deg);
+		}
+		75% {
+			transform: translate(-5px, -5px) rotate(0.5deg);
+		}
+	}
+
+	.float-animation {
+		animation: float 6s ease-in-out infinite;
+		animation-delay: 1s;
+	}
+
+	.float-animation-delay-1 {
+		animation: float 7s ease-in-out infinite;
+		animation-delay: 2s;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.float-animation,
+		.float-animation-delay-1,
+		.float-animation-delay-2 {
+			animation: none;
+		}
+	}
+</style>
