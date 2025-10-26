@@ -1,48 +1,72 @@
+<script>
+    import { navigate } from "astro:transitions/client";
+
+    function setupNavigateOnHover() {
+        const heroContainer = document.getElementById("hero-container");
+
+        if (heroContainer) {
+            const navigateToAbout = () => {
+                navigate("/about");
+                console.log("Navigating to about page");
+            };
+
+            setTimeout(() => {
+                heroContainer.addEventListener("pointerenter", navigateToAbout);
+            }, 500); // timeout to allow view transition animation to finish
+        }
+    }
+
+    document.addEventListener("astro:page-load", setupNavigateOnHover);
+</script>
+
 <div class="h-full w-full flex justify-center items-center">
-	<div class="grid grid-cols-1">
-		<h1 class="font-serif text-6xl float-animation text-center">
-			James Palmer
-		</h1>
-		<div class="grid grid-cols-1 sm:grid-cols-2">
-			<p class="float-animation-delay-1 text-center sm:text-right">
-				&ldquo;Software Engineer&rdquo;
-			</p>
-		</div>
-	</div>
+    <a href="/about">
+        <div id="hero-container" class="flex flex-col gap-1">
+            <h1 class="font-serif text-6xl float-animation text-center">
+                <span transition:name="first-name">James</span>
+                <span transition:name="last-name">Palmer</span>
+            </h1>
+            <div class="flex w-full justify-center sm:justify-start">
+                <p class="text-center w-fit" transition:name="hero-subtitle">
+                    Design Engineer
+                </p>
+            </div>
+        </div>
+    </a>
 </div>
 
 <style>
-	@keyframes float {
-		0%,
-		100% {
-			transform: translate(0, 0) rotate(0deg);
-		}
-		25% {
-			transform: translate(5px, -5px) rotate(1deg);
-		}
-		50% {
-			transform: translate(-5px, -10px) rotate(-0.5deg);
-		}
-		75% {
-			transform: translate(-5px, -5px) rotate(0.5deg);
-		}
-	}
+    @keyframes float {
+        0%,
+        100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+            transform: translate(5px, -5px) rotate(1deg);
+        }
+        50% {
+            transform: translate(-5px, -10px) rotate(-0.5deg);
+        }
+        75% {
+            transform: translate(-5px, -5px) rotate(0.5deg);
+        }
+    }
 
-	.float-animation {
-		animation: float 6s linear infinite;
-		animation-delay: 1s;
-	}
+    .float-animation {
+        animation: float 6s linear infinite;
+        animation-delay: 1s;
+    }
 
-	.float-animation-delay-1 {
-		animation: float 7s linear infinite;
-		animation-delay: 2s;
-	}
+    .float-animation-delay-1 {
+        animation: float 7s linear infinite;
+        animation-delay: 2s;
+    }
 
-	@media (prefers-reduced-motion: reduce) {
-		.float-animation,
-		.float-animation-delay-1,
-		.float-animation-delay-2 {
-			animation: none;
-		}
-	}
+    @media (prefers-reduced-motion: reduce) {
+        .float-animation,
+        .float-animation-delay-1,
+        .float-animation-delay-2 {
+            animation: none;
+        }
+    }
 </style>
