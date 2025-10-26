@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -13,7 +14,9 @@ import { ClientRouter } from "astro:transitions";
         <title>James Palmer</title>
     </head>
     <body>
-        <slot />
+        <div class="h-full w-full flex justify-center items-center">
+            <slot />
+        </div>
     </body>
 </html>
 
