@@ -4,10 +4,10 @@ import ArticleLayout from "../layouts/ArticleLayout.astro";
 
 <ArticleLayout>
     <p class="text-balance">
-        I'm <span transition:name="first-name">James</span>
-        <span transition:name="last-name">Palmer</span>, a <span
-            transition:name="software">software</span
-        >
+        I'm <span class="font-bold"
+            ><span transition:name="first-name">James</span>
+            <span transition:name="last-name">Palmer</span></span
+        >, a <span transition:name="software">software</span>
         <span transition:name="engineer">engineer</span> based in the UK.
     </p>
     <p class="text-balance animate-fade-in [animation-delay:0.1s]">
