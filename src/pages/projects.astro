@@ -1,5 +1,37 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
 ---
 
-<Layout />
+<ArticleLayout>
+    <h2 class="w-fit" transition:name="projects">Projects</h2>
+    <ul class="list-disc list-inside gap-2">
+        <li class="animate-fade-in [animation-delay:0.1s]">
+            <a class="link" href="https://solioanalytics.com" target="_blank"
+                >Solio Analytics</a
+            ><br />I spend most of my spare time building and scaling the UK's
+            most advanced fantasy sports analytics platform.
+        </li>
+        <li class="animate-fade-in [animation-delay:0.2s]">
+            <a
+                class="link"
+                href="https://github.com/jameshpalmer/pulp-vec"
+                target="_blank">pulp-vec</a
+            ><br />
+            Python library providing a rich and simple interface for building large-scale
+            mixed-integer linear programming models.
+        </li>
+        <li class="animate-fade-in [animation-delay:0.3s]">
+            <a class="link" href="https://trout-post.com" target="_blank"
+                >Trout Post</a
+            ><br />Beautiful (...if sparsely populated) blog containing thoughts
+            about sports data and analytics.
+        </li>
+    </ul>
+    <p class="animate-fade-in [animation-delay:0.4s]">
+        And <a
+            class="link"
+            href="https://github.com/jameshpalmer"
+            target="_blank">more</a
+        >!
+    </p>
+</ArticleLayout>

@@ -14,31 +14,18 @@ import Layout from "../layouts/Layout.astro";
                 </h1>
             </a>
 
-            <a
-                class="group link no-underline"
-                href="https://www.trysmudford.com/blog/i-think-im-a-design-engineer/"
-                target="_blank"
-            >
-                <p class="text-sm group whitespace-nowrap flex">
-                    <span
-                        class="opacity-0 group group-hover:opacity-100 hidden sm:block"
-                    >
-                        &ldquo;
-                    </span>
-                    <span transition:name="hero-subtitle">
-                        Design Engineer
-                    </span>
-                    <span
-                        class="opacity-0 group group-hover:opacity-100 hidden sm:block"
-                    >
-                        ?&rdquo;
-                    </span>
-                </p>
-            </a>
+            <p>
+                <span transition:name="software">Software </span>
+                <span transition:name="engineer">Engineer</span>
+            </p>
         </div>
         <div class="flex w-full justify-center gap-8">
             <a class="link link-hover" href="/self"><p>Self</p></a>
-            <a class="link link-hover" href="/projects"><p>Projects</p></a>
+            <a
+                class="link link-hover"
+                href="/projects"
+                transition:name="projects"><p>Projects</p></a
+            >
             <a
                 class="link link-hover flex items-center"
                 href="https://github.com/jameshpalmer"

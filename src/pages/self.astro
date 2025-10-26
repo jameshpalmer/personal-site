@@ -1,52 +1,36 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
 ---
 
-<Layout>
-    <div class="max-w-3/4 w-fit">
-        <div class="flex flex-col gap-4 max-w-100">
-            <a href="/about" class="link link-hover">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-move-left-icon lucide-move-left opacity-70"
-                    ><path d="M6 8L2 12L6 16"></path><path d="M2 12H22"
-                    ></path></svg
-                >
-            </a>
-            <p class="text-balance">
-                I'm <span transition:name="first-name">James</span>
-                <span transition:name="last-name">Palmer</span>, a software
-                engineer based in the UK.
-            </p>
-            <p>
-                I really enjoy creating useful programs that are challenging to
-                build.
-            </p>
-            <div class="flex-col flex gap-2">
-                <p class="text-balance">I believe:</p>
-                <ul class="list-disc list-inside">
-                    <li class="animate-visible-1">
-                        Simplicity is worth the effort
-                    </li>
-                    <li class="animate-visible-2">
-                        Development should be design-led
-                    </li>
-                    <li class="animate-visible-3">
-                        Software should be accessible to everyone
-                    </li>
-                    <li class="animate-visible-2">
-                        Great user experience usually wins
-                    </li>
-                </ul>
-            </div>
-        </div>
+<ArticleLayout>
+    <p class="text-balance">
+        I'm <span transition:name="first-name">James</span>
+        <span transition:name="last-name">Palmer</span>, a <span
+            transition:name="software">software</span
+        >
+        <span transition:name="engineer">engineer</span> based in the UK.
+    </p>
+    <p class="text-balance animate-fade-in [animation-delay:0.1s]">
+        I really enjoy creating useful, exceptional programs that are
+        challenging to build.
+    </p>
+    <div class="flex-col flex gap-2">
+        <p class="text-balance animate-fade-in [animation-delay:0.2s]">
+            I believe:
+        </p>
+        <ul class="list-disc list-inside">
+            <li class="animate-fade-in [animation-delay:0.3s]">
+                Simplicity is worth the effort
+            </li>
+            <li class="animate-fade-in [animation-delay:0.4s]">
+                Development is an extension of design
+            </li>
+            <li class="animate-fade-in [animation-delay:0.5s]">
+                Great user experience usually wins
+            </li>
+            <li class="animate-fade-in [animation-delay:0.6s]">
+                All applications should feel native
+            </li>
+        </ul>
     </div>
-</Layout>
+</ArticleLayout>

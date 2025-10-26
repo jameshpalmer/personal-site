@@ -19,21 +19,20 @@
     document.addEventListener("astro:page-load", setupNavigateOnHover);
 </script>
 
-<div class="h-full w-full flex justify-center items-center">
-    <a href="/about">
-        <div id="hero-container" class="flex flex-col gap-1">
-            <h1 class="font-serif text-6xl float-animation text-center">
-                <span transition:name="first-name">James</span>
-                <span transition:name="last-name">Palmer</span>
-            </h1>
-            <div class="flex w-full justify-center sm:justify-start">
-                <p class="text-center w-fit" transition:name="hero-subtitle">
-                    Design Engineer
-                </p>
-            </div>
+<a href="/about">
+    <div id="hero-container" class="flex flex-col gap-1">
+        <h1 class="font-serif text-6xl float-animation text-center">
+            <span transition:name="first-name">James</span>
+            <span transition:name="last-name">Palmer</span>
+        </h1>
+        <div class="flex w-full justify-center sm:justify-start">
+            <p class="text-center w-fit">
+                <span transition:name="software">Software </span>
+                <span transition:name="engineer">Engineer</span>
+            </p>
         </div>
-    </a>
-</div>
+    </div>
+</a>
 
 <style>
     @keyframes float {
